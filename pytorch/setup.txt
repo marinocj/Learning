@@ -1,0 +1,7 @@
+I downloaded anaconda then installed python.
+
+After I had finished these two installation I researched what I would need in order to use
+PyTorch and found that I would need to install pytorch, numpy, and pandas.
+
+I finished the three of these installations then debugged for a few hours before I was able 
+to launch vscode through anaconda and have all of the imports work. 
