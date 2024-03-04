@@ -106,4 +106,15 @@ if __name__ == "__main__":
     print(float_16_tensor)
     print(float_16_tensor.dtype)
 
+    #Getting information from Tensors
+    #Tensors not right data type = tensor.dtype
+    #Tensors not right shape = tensor.shape
+    #Tensors not on the right device = tensor.device
+
+    some_tensor = torch.rand(3,4)
+    print(some_tensor)
+    print(f"Datatype of Tensor: {some_tensor.dtype}")
+    print(f"Datatype of Tensor: {some_tensor.shape}")
+    print(f"Device is on: {some_tensor.device}")
+
     print()
