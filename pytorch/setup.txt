@@ -1,7 +1,32 @@
-I downloaded anaconda then installed python.
+First, I downloaded Anaconda onto my Windows device via the following link:
+        https://docs.anaconda.com/free/anaconda/install/windows/
 
-After I had finished these two installation I researched what I would need in order to use
-PyTorch and found that I would need to install pytorch, numpy, and pandas.
+You must launch VSCode through anaconda you cannot just open vscode regularly
 
-I finished the three of these installations then debugged for a few hours before I was able 
-to launch vscode through anaconda and have all of the imports work. 
+Then, I needed to download all of the following:
+pip
+pytorch
+pandas
+numpy
+cuda
+conda
+
+To ensure pip is installed:
+Open PowerShell
+cd AppData/Local
+pip should be in there
+
+Now, we launch the Anaconda PowerShell Prompt (the environment we will be using).
+
+To install cuda, follow the documentation in the following link:
+        https://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html
+
+Use the following commands to install PyTorch:
+conda install pytorch torchvision cpuonly -c pytorch
+
+To ensure installations are done:
+pip show torch (PyTorch)
+pip show pandas (pandas)
+pip show numpy (NumPy)
+nvcc -V (cuda)
+conda list (conda)
