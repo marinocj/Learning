@@ -84,7 +84,7 @@ if __name__ == "__main__":
 
     #tensor aggregation
 
-    print("\n---Tensor Aggregation---")
+    print("\n---Tensor Aggregation---\n")
 
     x = torch.arange(0,100,10)
     print(x)
@@ -103,3 +103,74 @@ if __name__ == "__main__":
     print()
     print(x.argmax())
     print(x[x.argmax()])
+
+    # restacking,shaping,squeezing,and unsqueezing tensors
+
+    # reshaping - reshapes an input tensor to a defined shape
+    # view - rturn a view of an input tensor of a certain shape but keep the same memory as the og
+    # stacking - combine multiple tnesors ontop or side by side to eachother
+    # squeeze - removes all "1" dimension from a tensor
+    # unqueeze - removes all "1" dimension from a tensor
+    # permute - return a view of the input with dimensions 
+
+    print("\n---Reshape---\n")
+    x = torch.arange(0.,100.,20.)
+    print(x)
+    reshaped_x = x.reshape(1,5)
+    print(reshaped_x)
+    
+    #change the view of x
+    print("\n---View---\n")
+    z = x.view(1,5)
+    print(z)
+    print(x)
+    z[:,0] = 8
+    print(z)
+    print(x)
+
+    print("\n---Stack---\n")
+
+    x_stacked = torch.stack([x,x,x,x],dim=0)
+    print(x_stacked)
+    x_stacked = torch.stack([x,x,x,x],dim=1)
+    print(x_stacked)
+
+    print("\n---Squeeze---\n")
+
+    x = torch.zeros(2, 1)
+    print(x)
+    print(x.size())
+    
+    y = torch.squeeze(x)
+    print(y)
+    print(y.size())
+
+    y = torch.squeeze(x, 0)
+    print(y)
+    print(y.size())
+
+    y = torch.squeeze(x, 1)
+    print(y)
+    print(y.size())
+
+    print("\n---Unsqueeze---\n")
+
+    x = torch.zeros(2)
+    print(x)
+    print(x.size())
+    
+    y = torch.unsqueeze(x)
+    print(y)
+    print(y.size())
+
+    y = torch.unsqueeze(x, 0)
+    print(y)
+    print(y.size())
+
+    y = torch.unsqueeze(x, 1)
+    print(y)
+    print(y.size())
+
+    y = torch.unsqueeze(x, (1, 2, 3))
+    print(y)
+    print(y.size())
